@@ -79,8 +79,22 @@ This folder houses reusable components with no integration that can be shared ac
 
 This is a special folder to place any component that needs integration with the back-end or is a composition of pure components.
 
-# Commands
+## Installation
 
-| Command                               | Action command                              |
-| ------------------------------------- | :------------------------------------------ |
-| npx **create-feature** {name-feature} | Create a new feature on folder src/features |
+```bash
+yarn add -D architecture-core
+```
+
+## Commands
+
+Commands to use on terminal using `npx ...`
+
+| Command                           | Action command                                                                                   |
+| --------------------------------- | :----------------------------------------------------------------------------------------------- |
+| **create-feature** {name-feature} | {**name-feature**} used to write a new feature name to create on project, on folder src/features |
+
+## Usage example
+
+```bash
+npx create-feature authentication
+```
