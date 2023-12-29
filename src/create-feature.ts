@@ -11,11 +11,6 @@ if (!folderName) {
 
 function searchDirectory(directory: string) {
   fs.readdir(directory, { withFileTypes: true }, (err, files) => {
-    if (err) {
-      console.error('Failed to read directory:', err);
-      return;
-    }
-
     for (const file of files) {
       if (file.isDirectory()) {
         const fullPath = path.join(directory, file.name);
@@ -27,16 +22,13 @@ function searchDirectory(directory: string) {
             const folderPath = `${newFolderPath}${dir}`;
             fs.mkdir(folderPath, { recursive: true }, (err) => {
               if (err) {
-                console.error('Failed to create folder:', err);
               } else {
                 console.log('Feature created successfully:');
 
                 FEATURE_STRUCTURE_FILES.filter((item) => {
                   if (folderPath.includes(item.name)) {
                     item.files.map((file) => {
-                      fs.writeFile(`${folderPath}/${file}`, '', (err) => {
-                        console.error('Failed to create files:', err);
-                      });
+                      fs.writeFile(`${folderPath}/${file}`, '', (err) => {});
                     });
                   }
                 });
