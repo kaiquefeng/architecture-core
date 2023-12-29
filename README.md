@@ -92,6 +92,7 @@ Commands to use on terminal using `npx ...`
 | Command                           | Action command                                                                                   |
 | --------------------------------- | :----------------------------------------------------------------------------------------------- |
 | **create-feature** {name-feature} | {**name-feature**} used to write a new feature name to create on project, on folder src/features |
+| **format-files**                  | Used to rewrite all names components existents on project to kebab-case                          |
 
 ## Usage example
 
