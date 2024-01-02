@@ -32,7 +32,7 @@
     │       │   └── ...
     │       ├── contexts/
     │       │   ├── auth/
-    │typescript",│   ├── auth.tsx
+    │       │   ├── auth.tsx
     │       │   │   ├── auth.types.ts
     │       │   │   └── index.ts
     │       │   └── ...

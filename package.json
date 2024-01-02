@@ -1,6 +1,6 @@
 {
   "name": "architecture-core",
-  "version": "1.2.2",
+  "version": "1.2.4",
   "description": "A architecture core is focused in formating project structure following a model pre-defined",
   "types": "dist/index.d.ts",
   "files": [
