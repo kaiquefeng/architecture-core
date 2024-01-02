@@ -1,6 +1,10 @@
-# Architecture Core
+<p align="center">
+  <img src="./src/assets/hero.png" width="100%" />
+</p>
 
-A architecture core is focused in formating project structure following a model pre-defined
+<h1 align="center">Architecture Core</h1>
+<p align="center">A architecture core is focused in formating project structure following a model pre-defined
+</p>
 
 ## Based structure React
 
@@ -28,7 +32,7 @@ A architecture core is focused in formating project structure following a model 
     │       │   └── ...
     │       ├── contexts/
     │       │   ├── auth/
-    │       │   │   ├── auth.tsx
+    │typescript",│   ├── auth.tsx
     │       │   │   ├── auth.types.ts
     │       │   │   └── index.ts
     │       │   └── ...

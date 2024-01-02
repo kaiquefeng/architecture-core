@@ -1,7 +1,7 @@
 {
   "name": "architecture-core",
   "version": "1.2.2",
-  "description": "",
+  "description": "A architecture core is focused in formating project structure following a model pre-defined",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**/*",
@@ -28,7 +28,12 @@
   "lint-staged": {
     "**/*": "yarn lint"
   },
-  "keywords": [],
+  "keywords": [
+    "architecture",
+    "structure",
+    "node",
+    "typescript"
+  ],
   "author": "Kaique Feng",
   "license": "MIT",
   "devDependencies": {
@@ -48,7 +53,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaiquefeng/architecture-core.git"
+    "url": "https://github.com/kaiquefeng/architecture-core"
   },
   "bugs": {
     "url": "https://github.com/kaiquefeng/architecture-core/issues"
