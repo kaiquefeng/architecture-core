@@ -1,6 +1,6 @@
 {
   "name": "architecture-core",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "A architecture core is focused in formating project structure following a model pre-defined",
   "types": "dist/index.d.ts",
   "files": [
@@ -49,7 +49,7 @@
   "dependencies": {},
   "type": "module",
   "engines": {
-    "node": "^18.0.0"
+    "node": ">18.0.0"
   },
   "repository": {
     "type": "git",
