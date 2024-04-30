@@ -9,7 +9,9 @@
     "README.md"
   ],
   "bin": {
+    "create": "./bin/create.js",
     "create-feature": "./bin/create-feature.js",
+    "create-component": "./bin/create-component.js",
     "format-files": "./bin/format-files.js"
   },
   "main": "./dist/index.cjs",
@@ -39,10 +41,14 @@
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@types/prompts": "^2.4.9",
     "eslint": "^8.56.0",
     "husky": "^8.0.3",
+    "kolorist": "^1.8.0",
     "lint-staged": "^15.2.0",
+    "minimist": "^1.2.8",
     "prettier": "^3.1.1",
+    "prompts": "^2.4.2",
     "typescript": "^4.4.3",
     "unbuild": "^0.5.11"
   },

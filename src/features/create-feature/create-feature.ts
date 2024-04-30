@@ -1,7 +1,8 @@
+import { EXCLUDED_PATHS } from '@/constants/excluded-paths';
+import { FEATURE_STRUCTURE_FILES, FEATURE_STRUCTURE_FOLDERS } from '@/constants/feature-structure';
 import fs from 'fs';
 import path from 'path';
-import { EXCLUDED_PATHS } from './constants/excluded-paths.js';
-import { FEATURE_STRUCTURE_FILES, FEATURE_STRUCTURE_FOLDERS } from './constants/feature-structure.js';
+import { CreateFeatureProps } from './create-feature.types.js';
 
 const folderName = process.argv[2];
 
@@ -10,7 +11,7 @@ if (!folderName) {
   process.exit(1);
 }
 
-function searchDirectory(directory: string) {
+export const createFeature = ({ directory }: CreateFeatureProps) => {
   fs.readdir(directory, { withFileTypes: true }, (err, files) => {
     for (const file of files) {
       const isExcluded =
@@ -21,6 +22,8 @@ function searchDirectory(directory: string) {
 
         if (file.name === 'features') {
           const newFolderPath = path.join(fullPath, folderName);
+
+          console.log({ name: file.name });
 
           FEATURE_STRUCTURE_FOLDERS.forEach((dir) => {
             const folderPath = `${newFolderPath}${dir}`;
@@ -47,11 +50,11 @@ function searchDirectory(directory: string) {
           console.log('Do not exist [features] folder in', file.name);
         }
 
-        searchDirectory(fullPath);
+        createFeature({ directory: fullPath });
       } else {
       }
     }
   });
-}
+};
 
-searchDirectory(process.cwd());
+createFeature({ directory: process.cwd() });

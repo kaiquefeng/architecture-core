@@ -1,0 +1,96 @@
+Arguments: 
+  /Users/kaiquefeng/.nvm/versions/node/v18.18.2/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js
+
+PATH: 
+  /Users/kaiquefeng/.nvm/versions/node/v18.18.2/bin:/Users/kaiquefeng/.nvm/versions/node/v16.18.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin:/Users/kaiquefeng/.nvm/versions/node/v16.18.0/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.18.2
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/@commitlint%2fcli: ETIMEDOUT
+      at Timeout._onTimeout (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:141550:19)
+      at listOnTimeout (node:internal/timers:569:17)
+      at process.processTimers (node:internal/timers:512:7)
+
+npm manifest: 
+  {
+    "name": "architecture-core",
+    "version": "1.2.4",
+    "description": "A architecture core is focused in formating project structure following a model pre-defined",
+    "types": "dist/index.d.ts",
+    "files": [
+      "dist/**/*",
+      "bin",
+      "README.md"
+    ],
+    "bin": {
+      "create": "./bin/create.js",
+      "create-feature": "./bin/create-feature.js",
+      "create-component": "./bin/create-component.js",
+      "format-files": "./bin/format-files.js"
+    },
+    "main": "./dist/index.cjs",
+    "module": "./dist/index.mjs",
+    "exports": {
+      ".": {
+        "require": "./dist/index.cjs",
+        "import": "./dist/index.mjs"
+      }
+    },
+    "scripts": {
+      "build": "unbuild && tsc --declaration --emitDeclarationOnly",
+      "prepare": "husky install",
+      "lint": "prettier --write ."
+    },
+    "lint-staged": {
+      "**/*": "yarn lint"
+    },
+    "keywords": [
+      "architecture",
+      "structure",
+      "node",
+      "typescript"
+    ],
+    "author": "Kaique Feng",
+    "license": "MIT",
+    "devDependencies": {
+      "@commitlint/cli": "^18.4.3",
+      "@commitlint/config-conventional": "^18.4.3",
+      "@types/prompts": "^2.4.9",
+      "eslint": "^8.56.0",
+      "husky": "^8.0.3",
+      "kolorist": "^1.8.0",
+      "lint-staged": "^15.2.0",
+      "minimist": "^1.2.8",
+      "prettier": "^3.1.1",
+      "prompts": "^2.4.2",
+      "typescript": "^4.4.3",
+      "unbuild": "^0.5.11"
+    },
+    "dependencies": {},
+    "type": "module",
+    "engines": {
+      "node": "^18.0.0"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/kaiquefeng/architecture-core"
+    },
+    "bugs": {
+      "url": "https://github.com/kaiquefeng/architecture-core/issues"
+    },
+    "homepage": "https://github.com/kaiquefeng/architecture-core#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

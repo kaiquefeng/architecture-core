@@ -2,7 +2,11 @@ export default {
   entries: [
     {
       name: 'create-feature',
-      input: 'src/create-feature.ts',
+      input: 'src/features/create-feature/create-feature.ts',
+    },
+    {
+      name: 'create',
+      input: 'src/create.ts',
     },
     {
       name: 'format-files',
